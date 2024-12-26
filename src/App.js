@@ -1,23 +1,14 @@
+//入口页面
 import logo from './logo.svg';
 import './App.css';
+import { RouterProvider } from 'react-router-dom'
+import router from './router'
 
+//显示的router下第一个页面，也就是main
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <RouterProvider router={router}/>
     </div>
   );
 }

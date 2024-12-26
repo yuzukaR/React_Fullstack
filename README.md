@@ -16,11 +16,12 @@ functionality including:
 6. system user permission 系统用户鉴权
 7. component packaging 组件封装和模块化
 
-以create-react-app脚手架开始创建项目
+1. 以create-react-app脚手架开始创建项目
 npx create-react-app my-app
 cd my-app
 npm start
 
+2. react-router路由介绍
 
 
 
