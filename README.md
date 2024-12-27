@@ -25,6 +25,15 @@ cd my-app
 npm start
 
 2. react-router路由介绍
+引进路由
+配置路由文件router/index.js
+分配页面pages，每个页面一个文件夹
+
+3. Ant组件设计页面布局layout
+npm install Ant
+css重新设计layout
+sider，header组件抽离，创建component文件夹存放自制组件
+
 
 
 
