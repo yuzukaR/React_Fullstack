@@ -19,20 +19,20 @@ functionality including:
 _____________________________________
 开始项目
 
-1. 以create-react-app脚手架开始创建项目
-npx create-react-app my-app
-cd my-app
-npm start
+1. 以create-react-app脚手架开始创建项目  
+npx create-react-app my-app  
+cd my-app  
+npm start  
 
-2. react-router路由介绍
-引进路由
-配置路由文件router/index.js
-分配页面pages，每个页面一个文件夹
+2. react-router路由介绍  
+引进路由  
+配置路由文件router/index.js  
+分配页面pages，每个页面一个文件夹  
 
-3. Ant组件设计页面布局layout
-npm install Ant
-css重新设计layout
-sider，header组件抽离，创建component文件夹存放自制组件
+3. Ant组件设计页面布局layout  
+npm install Ant  
+css重新设计layout  
+sider，header组件抽离，创建component文件夹存放自制组件  
 
 
 
