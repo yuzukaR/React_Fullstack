@@ -5,6 +5,7 @@ import { RouterProvider } from 'react-router-dom'
 import router from './router'
 
 //显示的router下第一个页面，也就是main
+//函数组件 使用JSX语法
 function App() {
   return (
     <div className='app'>
@@ -13,4 +14,5 @@ function App() {
   );
 }
 
+//导出
 export default App;

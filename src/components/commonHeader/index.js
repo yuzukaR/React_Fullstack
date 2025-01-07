@@ -2,11 +2,12 @@ import React from "react";
 import { Button, Layout, Avatar, Dropdown } from "antd";
 import './index.css'
 import { MenuFoldOutlined } from '@ant-design/icons'
+import {} from 'react-redux'
 
 const { Header } = Layout;
 
-
-const CommonHeader = () => {
+//（）内获取parameter,传递进来的属性
+const CommonHeader = ({ collapsed }) => {
     const logout = () => { }
     const items = [
         {
@@ -26,6 +27,9 @@ const CommonHeader = () => {
             )
         }
     ]
+    const setCollapsed = () => {
+        console.log(collapsed)
+    }
     return (
         <Header className="header-container">
             <Button
@@ -38,6 +42,7 @@ const CommonHeader = () => {
                     height: 32,
                     backgroundColor: '#fff'
                 }}
+                onClick={() => { setCollapsed() }}
             />
             <Dropdown
                 menu={{ items }}
