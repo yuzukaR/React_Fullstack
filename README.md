@@ -35,7 +35,7 @@ css重新设计layout
 sider，header组件抽离，创建component文件夹存放自制组件  
 
 4. 引入redux toolkit对分离组件做状态统一  
-
+实现header参数传入sider，对sider组件进行收起  
 
 
 

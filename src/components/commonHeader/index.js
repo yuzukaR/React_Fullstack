@@ -2,8 +2,8 @@ import React from "react";
 import { Button, Layout, Avatar, Dropdown } from "antd";
 import './index.css'
 import { MenuFoldOutlined } from '@ant-design/icons'
-import {} from 'react-redux'
-
+import { useDispatch } from 'react-redux'
+import {collapseMenu} from '../../store/reducers/tab'
 const { Header } = Layout;
 
 //（）内获取parameter,传递进来的属性
@@ -27,8 +27,11 @@ const CommonHeader = ({ collapsed }) => {
             )
         }
     ]
+    //创建dispatch
+    const dispatch = useDispatch()
     const setCollapsed = () => {
         console.log(collapsed)
+        dispatch(collapseMenu())
     }
     return (
         <Header className="header-container">
