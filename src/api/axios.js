@@ -6,10 +6,10 @@ const baseUrl = '/api'
 // axios二次封装的核心
 
 class HttpRequest {
-    constructor () {
+    constructor(baseUrl) {
         this.baseUrl = baseUrl
     }
-    getInsideConfig(){
+    getInsideConfig() {
         const config = {
             baseUrl: this.baseUrl,
             header: {}
@@ -17,11 +17,33 @@ class HttpRequest {
         return config
     }
 
-    request(options){
+    interception(instance) {
+        // Add a request interceptor
+        instance.interceptors.request.use(function (config) {
+            // Do something before request is sent
+            return config;
+        }, function (error) {
+            // Do something with request error
+            return Promise.reject(error);
+        });
+
+        // Add a response interceptor
+        instance.interceptors.response.use(function (response) {
+            // Any status code that lie within the range of 2xx cause this function to trigger
+            // Do something with response data
+            return response;
+        }, function (error) {
+            // Any status codes that falls outside the range of 2xx cause this function to trigger
+            // Do something with response error
+            return Promise.reject(error);
+        });
+    }
+    request(options) {
         options = { ...this.getInsideConfig(), ...options }
         // 创建axios实例
         const instance = axios.create()
-
+        // 实例拦截的绑定
+        this.interception(instance)
         return instance(options)
     }
 }
