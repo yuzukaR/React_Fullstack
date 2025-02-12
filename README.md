@@ -17,7 +17,7 @@ functionality including:
 7. component packaging 组件封装和模块化
 
 _____________________________________
-开始项目
+## 开始项目
 
 1. 以create-react-app脚手架开始创建项目  
 npx create-react-app my-app  
@@ -36,6 +36,32 @@ sider，header组件抽离，创建component文件夹存放自制组件
 
 4. 引入redux toolkit对分离组件做状态统一  
 实现header参数传入sider，对sider组件进行收起  
+
+5. 修改home page，引用ANT的card UI，并引入Axios  
+
+6. Axios的二次封装，为什么要去做，要做哪些事情？  
+- 结合Axios提供的API：
+- 拦截器  
+    - 请求拦截器（接口请求前）    
+    - 响应拦截器（拿到数据之后做异常状态处理）  
+对axios接口相关的文件，创建API文件夹  
+
+
+
+
+
+
+## Axios  
+基于promise网络请求库，作用于node.js和浏览器中。  
+- 可以从node.js创建http请求  
+- 支持promise API  
+- 拦截请求和响应  
+- 取消请求  
+- 超时处理  
+- 查询参数序列化支持嵌套项处理  
+- 自动将请求体序列化为: JSON, Multipart/FormData, URL encoded form  
+- 将HTML Form 转换成Json进行请求  
+- 自动转换JSON数据  
 
 
 
