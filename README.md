@@ -48,6 +48,18 @@ sider，header组件抽离，创建component文件夹存放自制组件
 
 
 
+## react-dom-router  
+URL对后端服务器发出请求  
+后端路由根据不同的URL请求来执行不同的代码，然后返回不同的结果  
+前端路由针对不同的URL渲染不同的组件 - 组件中包含的后端请求API接口再向后端进行请求  
+    - 拦截：因为前端框架的影响，URL改变先不去请求后端，而是显示不同的组件，由组件中的接口请求后端 
+    - 例子：点击不同tab切换路由的url，但并没有对后端发出请求，因为前端拦截了并自己处理了   
+1. 在router/index.js中配置router文件  
+2. app.js中引入router  
+3. index.js创建router组件并render  
+4. main.js中使用outlet给子组件占位，表示这个位置可能是给将来挂载其他组件使用的  
+使用children来表示嵌套关系  
+
 
 
 
