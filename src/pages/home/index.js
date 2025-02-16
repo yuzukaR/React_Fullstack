@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Card, Col, Row, Avatar } from 'antd'
 import './home.css'
+import { getData } from '../../api'
 
 const Home = () => {
     const userImg = require("../../assets/images/1.jpg")
+    useEffect(()=> {
+        getData().then((res) => {
+            console.log(res, 'res')
+        })
+}, [])
     return(
         <div>
             <Row className='home'>

@@ -46,6 +46,8 @@ sider，header组件抽离，创建component文件夹存放自制组件
     - 响应拦截器（拿到数据之后做异常状态处理）  
 对axios接口相关的文件，创建API文件夹  
 
+7. Mock.js生成随机数据，拦截Ajax请求。在后端真实接口没有出来前，可以使用mock进行模拟  
+
 
 
 ## react-dom-router  
