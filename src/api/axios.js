@@ -1,17 +1,17 @@
 //二次封装axios的逻辑
 import axios from 'axios'
 
-const baseUrl = '/api'
+const baseURL = '/api'
 
 // axios二次封装的核心
 
 class HttpRequest {
-    constructor(baseUrl) {
-        this.baseUrl = baseUrl
+    constructor(baseURL) {
+        this.baseURL = baseURL
     }
     getInsideConfig() {
         const config = {
-            baseUrl: this.baseUrl,
+            baseURL: this.baseURL,
             header: {}
         }
         return config
@@ -48,4 +48,4 @@ class HttpRequest {
     }
 }
 
-export default new HttpRequest(baseUrl)
+export default new HttpRequest(baseURL)
